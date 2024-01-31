@@ -23,7 +23,8 @@ def index(request):
 def home_page(request):
     return HttpResponse('Home Page')
 
-def meetup_details(request):
+def meetup_details(request,meetup_slug):
+    print(meetup_slug)
     selected_meetup = {
             "title":"A first meetup",
             "description":"This is the first meetup"

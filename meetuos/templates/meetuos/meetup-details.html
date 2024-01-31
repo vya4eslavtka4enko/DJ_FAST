@@ -1,17 +1,12 @@
+{%extends "meetuos/base/base.html"%}
 {%load static%}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{meetup_title}}</title>
-    <link rel="stylesheet" href="{% static "meetup/style/base.css" %}" />
-    <link rel="icon" href="{%static "meetup/style/meetup_details.css"%}" />
-  </head>
 
-  <body>
-    <main>
+    {%block title%}{{meetup_title}}{%endblock%}
+    {%block site_css%}
+        <link rel="stylesheet" href="{% static "/meetuos/base.css" %}" />
+        <link rel="stylesheet" href="{%static "meetuos/meetup-details.css"%}" />
+    {%endblock%}
+    {%block body%}
         <article>
             <img src = "" alt = "">
             <section id = "location">
@@ -30,6 +25,4 @@
                 <h2>Join Us!</h2>
             </section>
         </article>  
-    </main>
-  </body>
-</html>
+    {%endblock%}
