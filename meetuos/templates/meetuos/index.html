@@ -26,23 +26,7 @@
             <h2>Upcoming meetups</h2>
             <ol>
                 {%for item_meetups in meetups%}
-                <li class = "meetup-item">
-                    <article>
-                        <div class = "meetup-summary">
-                            <div class = "meetup-image">
-                                <img src = "" alt = "">
-                            </div>
-                            <div class = "meetup-details">
-                                <h3>{{item_meetups.title}}</h3>
-                                <address>{{item_meetups.location}}</address>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class = "meetup-action">
-                            <a href = "{% url "meetup-detail" item_meetups.slug %}" class = "btn">More Details</a>
-                        </div>
-                    </article>  
-                </li>
+                    {%include "meetuos/includes/meetup-item.html" with title=item_meetups.title image=item_meetups.image.url location="New York" slug=item_meetups.slug%}
                 {%endfor%}
             </ol>
         </section>
