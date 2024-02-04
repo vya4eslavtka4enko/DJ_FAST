@@ -11,7 +11,7 @@ class Location(models.Model):
     # one-to-one
     # many-to-many
 
-class Participent(models.Model):
+class Participant(models.Model):
     email = models.EmailField(unique = "True")
 
     def __str__(self):
